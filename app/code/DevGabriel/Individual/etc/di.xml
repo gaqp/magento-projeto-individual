@@ -1,7 +1,4 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-	<preference for="DevGabriel\Individual\Api\CreateManagementInterface" type="DevGabriel\Individual\Model\CreateManagement"/>
-	<preference for="DevGabriel\Individual\Api\ReadManagementInterface" type="DevGabriel\Individual\Model\ReadManagement"/>
-	<preference for="DevGabriel\Individual\Api\UpdateManagementInterface" type="DevGabriel\Individual\Model\UpdateManagement"/>
-	<preference for="DevGabriel\Individual\Api\DeleteManagementInterface" type="DevGabriel\Individual\Model\DeleteManagement"/>
+	<preference for="DevGabriel\Individual\Api\SellerApiInterface" type="DevGabriel\Individual\Model\SellerApi"/>
 </config>

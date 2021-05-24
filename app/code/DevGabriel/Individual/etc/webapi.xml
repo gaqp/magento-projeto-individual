@@ -1,25 +1,25 @@
 <?xml version="1.0" ?>
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
 	<route url="/V1/devgabriel-individual/create" method="PUT">
-		<service class="DevGabriel\Individual\Api\CreateManagementInterface" method="putCreate"/>
+		<service class="DevGabriel\Individual\Api\SellerApiInterface" method="createSeller"/>
 		<resources>
 			<resource ref="anonymous"/>
 		</resources>
 	</route>
 	<route url="/V1/devgabriel-individual/read" method="GET">
-		<service class="DevGabriel\Individual\Api\ReadManagementInterface" method="getRead"/>
+		<service class="DevGabriel\Individual\Api\SellerApiInterface" method="getSeller"/>
 		<resources>
 			<resource ref="anonymous"/>
 		</resources>
 	</route>
 	<route url="/V1/devgabriel-individual/update" method="POST">
-		<service class="DevGabriel\Individual\Api\UpdateManagementInterface" method="postUpdate"/>
+		<service class="DevGabriel\Individual\Api\SellerApiInterface" method="updateSeller"/>
 		<resources>
 			<resource ref="anonymous"/>
 		</resources>
 	</route>
-	<route url="/V1/devgabriel-individual/delete" method="GET">
-		<service class="DevGabriel\Individual\Api\DeleteManagementInterface" method="getDelete"/>
+	<route url="/V1/devgabriel-individual/delete" method="DELETE">
+		<service class="DevGabriel\Individual\Api\SellerApiInterface" method="deleteSeller"/>
 		<resources>
 			<resource ref="anonymous"/>
 		</resources>
