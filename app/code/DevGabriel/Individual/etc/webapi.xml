@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/devgabriel-individual/create" method="PUT">
+		<service class="DevGabriel\Individual\Api\CreateManagementInterface" method="putCreate"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+	<route url="/V1/devgabriel-individual/read" method="GET">
+		<service class="DevGabriel\Individual\Api\ReadManagementInterface" method="getRead"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+	<route url="/V1/devgabriel-individual/update" method="POST">
+		<service class="DevGabriel\Individual\Api\UpdateManagementInterface" method="postUpdate"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+	<route url="/V1/devgabriel-individual/delete" method="GET">
+		<service class="DevGabriel\Individual\Api\DeleteManagementInterface" method="getDelete"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+</routes>

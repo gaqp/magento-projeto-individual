@@ -1,0 +1,10 @@
+{
+    "name": "DevGabriel/Teste",
+    "description": "Test component for Magento 2",
+    "type": "magento2-module",
+    "version": "102.1",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ]
+}

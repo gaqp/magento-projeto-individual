@@ -1,0 +1,15 @@
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+     <table name="third_party_seller"><column xsi:type="int" name="tps_seller_id" padding="10" identity="true" comment="Identificador da entidade"/>
+        <column xsi:type="varchar" name="tps_seller_name" length="500" comment="Nome do Vendedor"></column>
+        <column xsi:type="varchar" name="tps_seller_cpf" length="15" comment="CPF do vendedor"></column>
+        <column xsi:type="varchar" name="tps_seller_street" length="255" comment="Nome da Rua do Vendedor"></column>
+        <column xsi:type="varchar" name="tps_seller_neighborhood" length="255" comment="Bairro do Vendedor"></column>
+        <column xsi:type="varchar" name="tps_seller_city" length="50" comment="Cidade do Vendedor"></column>
+        <column xsi:type="varchar" name="tps_seller_state" length="50" comment="Estado do Vendedor"></column>
+        <column xsi:type="varchar" name="tps_seller_phone" length="50" comment="Telefone do Vendedor"></column>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="tps_seller_id"/>
+        </constraint>
+     </table>
+</schema>
