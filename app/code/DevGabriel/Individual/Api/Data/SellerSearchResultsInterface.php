@@ -8,7 +8,7 @@ namespace DevGabriel\Individual\Api\Data;
 use Magento\Framework\Api\SearchResultsInterface;
 
 /**
- * Interface for cms page search results.
+ * Interface for Seller search results.
  * @api
  * @since 100.0.2
  */

@@ -19,17 +19,23 @@ interface SellerInterface
     /**
      * Constants for keys of data array. Identical to the name of the getter in snake case
      */
-    const ID = 'id';
-    const NAME = 'name';
-    const CPF = 'cpf';
-    const STREET = 'street';
-    const NEIGHBORHOOD = 'neighborhood';
-    const CITY = 'city';
-    const STATE = 'state';
-    const PHONE = 'phone';
+    const ID = 'tps_seller_id';
+    const NAME = 'tps_seller_name';
+    const CPF = 'tps_seller_cpf';
+    const STREET = 'tps_seller_street';
+    const NEIGHBORHOOD = 'tps_seller_neighborhood';
+    const CITY = 'tps_seller_city';
+    const STATE = 'tps_seller_state';
+    const PHONE = 'tps_seller_phone';
+
 
     /**
-     * @param $NAME
+     * @return int | null
+     */
+    public function getId();
+
+    /**
+     * @param $name
      * @return null
      */
     public function setName($name);
@@ -37,10 +43,10 @@ interface SellerInterface
     /**
      * @return string
      */
-    public function getName(): string;
+    public function getName();
 
     /**
-     * @param $CPF
+     * @param $cpf
      * @return null
      */
     public function setCpf($cpf);
@@ -48,10 +54,10 @@ interface SellerInterface
     /**
      * @return string
      */
-    public function getCpf(): string;
+    public function getCpf();
 
     /**
-     * @param $STREET
+     * @param $street
      * @return null
      */
     public function setStreet($street);
@@ -59,10 +65,10 @@ interface SellerInterface
     /**
      * @return string
      */
-    public function getStreet(): string;
+    public function getStreet();
 
     /**
-     * @param $NEIGHBORHOOD
+     * @param $neighborhood
      * @return null
      */
     public function setNeighborhood($neighborhood);
@@ -70,10 +76,10 @@ interface SellerInterface
     /**
      * @return string
      */
-    public function getNeighborhood(): string;
+    public function getNeighborhood();
 
     /**
-     * @param $CITY
+     * @param $city
      * @return null
      */
     public function setCity($city);
@@ -81,10 +87,10 @@ interface SellerInterface
     /**
      * @return string
      */
-    public function getCity(): string;
+    public function getCity();
 
     /**
-     * @param $STATE
+     * @param $state
      * @return null
      */
     public function setState($state);
@@ -92,10 +98,10 @@ interface SellerInterface
     /**
      * @return string
      */
-    public function getState(): string;
+    public function getState();
 
     /**
-     * @param $PHONE
+     * @param $phone
      * @return null
      */
     public function setPhone($phone);
@@ -103,6 +109,6 @@ interface SellerInterface
     /**
      * @return string
      */
-    public function getPhone(): string;
+    public function getPhone();
 
 }

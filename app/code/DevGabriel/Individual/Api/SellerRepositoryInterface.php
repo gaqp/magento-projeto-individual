@@ -6,7 +6,7 @@
 declare(strict_types=1);
 
 namespace DevGabriel\Individual\Api;
-interface SellerRepository
+interface SellerRepositoryInterface
 {
     /**
      * Save page.

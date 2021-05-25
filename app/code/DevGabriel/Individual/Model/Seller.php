@@ -4,77 +4,101 @@
 namespace DevGabriel\Individual\Model;
 
 
-class Seller implements \DevGabriel\Individual\Api\Data\SellerInterface
+use Magento\Framework\Model\AbstractModel;
+
+class Seller extends AbstractModel implements \DevGabriel\Individual\Api\Data\SellerInterface
 {
-    //Criar método construtor protegido
+    protected function _construct(){
+        $this->_init(\DevGabriel\Individual\Model\ResourceModel\Seller::class);
+    }
+
+    public function getId()
+    {
+        return $this->getData(Seller::ID);
+    }
 
     public function setName($NAME)
     {
-        // TODO: Implement setName() method.
+        return $this->setData(Seller::NAME);
     }
 
-    public function getName(): string
+    /**
+     * @return string | null
+     */
+    public function getName()
     {
-        // TODO: Implement getName() method.
+        return $this->getData(Seller::NAME);
     }
 
     public function setCPF($CPF)
     {
-        // TODO: Implement setCPF() method.
+        return $this->setData(Seller::CPF);
     }
-
-    public function getCPF(): string
+    /**
+     * @return string | null
+     */
+    public function getCPF()
     {
-        // TODO: Implement getCPF() method.
+        return $this->getData(Seller::CPF);
     }
 
     public function setStreet($STREET)
     {
-        // TODO: Implement setStreet() method.
+        return $this->setData(Seller::STREET);
     }
-
-    public function getStreet(): string
+    /**
+     * @return string | null
+     */
+    public function getStreet()
     {
-        // TODO: Implement getStreet() method.
+        return $this->getData(Seller::STREET);
     }
 
     public function setNeighborhood($NEIGHBORHOOD)
     {
-        // TODO: Implement setNeighborhood() method.
+        return $this->setData(Seller::NEIGHBORHOOD);
     }
-
-    public function getNeighborhood(): string
+    /**
+     * @return string | null
+     */
+    public function getNeighborhood()
     {
-        // TODO: Implement getNeighborhood() method.
+        return $this->getData(Seller::NEIGHBORHOOD);
     }
 
     public function setCity($CITY)
     {
-        // TODO: Implement setCity() method.
+        return $this->setData(Seller::CITY);
     }
-
-    public function getCity(): string
+    /**
+     * @return string | null
+     */
+    public function getCity()
     {
-        // TODO: Implement getCity() method.
+        return $this->getData(Seller::CITY);
     }
 
     public function setState($STATE)
     {
-        // TODO: Implement setState() method.
+        return $this->setData(Seller::STATE);
     }
-
-    public function getState(): string
+    /**
+     * @return string | null
+     */
+    public function getState()
     {
-        // TODO: Implement getState() method.
+        return $this->getData(Seller::STATE);
     }
 
     public function setPhone($PHONE)
     {
-        // TODO: Implement setPhone() method.
+        return $this->setData(Seller::PHONE);
     }
-
-    public function getPhone(): string
+    /**
+     * @return string | null
+     */
+    public function getPhone()
     {
-        // TODO: Implement getPhone() method.
+        return $this->getData(Seller::PHONE);
     }
 }
