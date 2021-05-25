@@ -11,6 +11,7 @@ namespace DevGabriel\Individual\Model;
 use DevGabriel\Individual\Api\Data\SellerInterface;
 use DevGabriel\Individual\Api\Data\SellerInterfaceFactory;
 use DevGabriel\Individual\Api\Data\SellerSearchResultsInterface;
+use DevGabriel\Individual\Api\Data\SellerSearchResultsInterfaceFactory;
 use DevGabriel\Individual\Api\SellerRepositoryInterface;
 use DevGabriel\Individual\Model\Seller;
 use DevGabriel\Individual\Model\SellerSearchResults;
@@ -36,7 +37,7 @@ class SellerRepository implements \DevGabriel\Individual\Api\SellerRepositoryInt
 
     private $hydrator;
 
-    private $searchResultsInterfaceFactory;
+    private $sellerSearchResultsInterfaceFactory;
 
     public function __construct(
         CollectionFactory $collectionFactory,
@@ -44,14 +45,14 @@ class SellerRepository implements \DevGabriel\Individual\Api\SellerRepositoryInt
         SellerResourceModel $resourceModel,
         CollectionProcessor $collectionProcessor,
         HydratorInterface $hydrator,
-        SellerSearchResultsInterface $searchResultsInterfaceFactory
+        SellerSearchResultsInterfaceFactory $sellerSearchResultsInterfaceFactory
     ){
         $this->collectionFactory = $collectionFactory;
         $this->sellerInterfaceFactory = $sellerInterfaceFactory;
         $this->resourceModel = $resourceModel;
         $this->collectionProcessor = $collectionProcessor;
         $this->hydrator = $hydrator;
-        $this->searchResultsInterfaceFactory = $searchResultsInterfaceFactory;
+        $this->sellerSearchResultsInterfaceFactory = $sellerSearchResultsInterfaceFactory;
     }
     public function save(\DevGabriel\Individual\Api\Data\SellerInterface $seller)
     {
@@ -80,7 +81,7 @@ class SellerRepository implements \DevGabriel\Individual\Api\SellerRepositoryInt
     {
         $collection = $this->collectionFactory->create();
         $this->collectionProcessor->process($searchCriteria,$collection);
-        $searchResults = $this->searchResultsInterfaceFactory->create();
+        $searchResults = $this->sellerSearchResultsInterfaceFactory->create();
         $searchResults->setSearchCriteria($searchCriteria);
         $searchResults->setItems($collection->getItems());
         $searchResults->setTotalCount($collection->getSize());

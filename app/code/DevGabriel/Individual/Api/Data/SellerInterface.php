@@ -19,18 +19,18 @@ interface SellerInterface
     /**
      * Constants for keys of data array. Identical to the name of the getter in snake case
      */
-    const ID = 'tps_seller_id';
-    const NAME = 'tps_seller_name';
-    const CPF = 'tps_seller_cpf';
-    const STREET = 'tps_seller_street';
-    const NEIGHBORHOOD = 'tps_seller_neighborhood';
-    const CITY = 'tps_seller_city';
-    const STATE = 'tps_seller_state';
-    const PHONE = 'tps_seller_phone';
+    const ID = 'id';
+    const NAME = 'name';
+    const CPF = 'cpf';
+    const STREET = 'street';
+    const NEIGHBORHOOD = 'neighborhood';
+    const CITY = 'city';
+    const STATE = 'state';
+    const PHONE = 'phone';
 
 
     /**
-     * @return int | null
+     * @return int
      */
     public function getId();
 

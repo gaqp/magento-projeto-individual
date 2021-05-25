@@ -17,85 +17,85 @@ class Seller extends AbstractModel implements \DevGabriel\Individual\Api\Data\Se
         return $this->getData(Seller::ID);
     }
 
-    public function setName($NAME)
+    public function setName($name)
     {
-        return $this->setData(Seller::NAME);
+        return $this->setData(Seller::NAME,$name);
     }
 
     /**
-     * @return string | null
+     * @return string
      */
     public function getName()
     {
         return $this->getData(Seller::NAME);
     }
 
-    public function setCPF($CPF)
+    public function setCPF($cpf)
     {
-        return $this->setData(Seller::CPF);
+        return $this->setData(Seller::CPF,$cpf);
     }
     /**
-     * @return string | null
+     * @return string
      */
     public function getCPF()
     {
         return $this->getData(Seller::CPF);
     }
 
-    public function setStreet($STREET)
+    public function setStreet($street)
     {
-        return $this->setData(Seller::STREET);
+        return $this->setData(Seller::STREET,$street);
     }
     /**
-     * @return string | null
+     * @return string
      */
     public function getStreet()
     {
         return $this->getData(Seller::STREET);
     }
 
-    public function setNeighborhood($NEIGHBORHOOD)
+    public function setNeighborhood($neighborhood)
     {
-        return $this->setData(Seller::NEIGHBORHOOD);
+        return $this->setData(Seller::NEIGHBORHOOD,$neighborhood);
     }
     /**
-     * @return string | null
+     * @return string
      */
     public function getNeighborhood()
     {
         return $this->getData(Seller::NEIGHBORHOOD);
     }
 
-    public function setCity($CITY)
+    public function setCity($city)
     {
-        return $this->setData(Seller::CITY);
+        return $this->setData(Seller::CITY,$city);
     }
     /**
-     * @return string | null
+     * @return string
      */
     public function getCity()
     {
         return $this->getData(Seller::CITY);
     }
 
-    public function setState($STATE)
+    public function setState($state)
     {
-        return $this->setData(Seller::STATE);
+        return $this->setData(Seller::STATE,$state);
     }
     /**
-     * @return string | null
+     * @return string
      */
     public function getState()
     {
         return $this->getData(Seller::STATE);
     }
 
-    public function setPhone($PHONE)
+    public function setPhone($phone)
     {
-        return $this->setData(Seller::PHONE);
+        return $this->setData(Seller::PHONE,$phone);
     }
     /**
-     * @return string | null
+     * @return string
      */
     public function getPhone()
     {

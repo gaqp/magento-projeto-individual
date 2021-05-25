@@ -11,6 +11,6 @@ class Seller extends AbstractDb
 
     protected function _construct()
     {
-        $this->_init('third_party_seller','tps_seller_id');
+        $this->_init('third_party_seller','id');
     }
 }
